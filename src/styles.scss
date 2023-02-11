@@ -1,0 +1,26 @@
+.myCode1{
+  display: block;
+  padding: 3px 3px 2px;
+  font-size: 14px;
+  line-height: 20px;
+  width: 100%;
+  background-color: #333;
+  font-family: arial;
+  color: #f7f7f7;
+  mark.tag {
+    color: #e8bf6a;
+    background-color: transparent;
+  }
+  mark.binding {
+    color: #9775a7;
+    background-color: transparent;
+  }
+  mark.lrbraces {
+    color: #cc7832;
+    background-color: transparent;
+  }
+  mark.property {
+    color: #9775a7;
+    background-color: transparent;
+  }
+}

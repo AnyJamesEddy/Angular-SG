@@ -1,0 +1,52 @@
+<p style="font-style: italic">"Hello! I'm {{name}} and this is a small guide for noobs like me!"</p>
+<p> First let's take a look to what has already happened! Here's how I made this presentation!</p>
+<pre class="myCode1">
+  <mark class="tag">&lt;p</mark> style="font-style: italic"<mark class="tag">&gt;</mark>
+      "Hello! I'm <mark class="lrbraces"> &lbrace; &lbrace; </mark><mark class="binding"> name </mark><mark
+  class="lrbraces"> &rbrace; &rbrace; </mark>and this is a small guide for noobs like me!"
+  <mark class="tag">&lt;/p&gt;</mark>
+</pre>
+<p>
+  What you see is called <span style="font-weight: bold"> string interpolation</span> and it is one of
+  the three main ways to make your Typescript code work with your HTML template!
+</p>
+<div>
+  These communication methods are:
+  <ul style="font-weight: bold">
+    <li> String Interpolation</li>
+    <li style="margin-top: 5px"> Property Binding</li>
+    <li style="margin-top: 5px"> Event Binding</li>
+  </ul>
+</div>
+<p style="font-style: italic"> Consider now these buttons:
+  <button [style.background-color]="b1Pressed ? 'green' : (b2Pressed ? 'red' : null)" class="myButton1"
+          (click)="onClick()">BUTTON 1
+  </button>
+  -
+  <button [style.background-color]="b2Pressed ? 'green' : (b1Pressed ? 'red' : null)" (click)="onClick()">BUTTON 2
+  </button>
+</p>
+<p>
+  If you click on Button 1, it will become green, while Button 2 will become red and viceversa.
+  This has been made via event binding.
+</p>
+<p>
+  Here's the snippet:
+</p>
+<pre class="myCode1">
+  <mark class="tag">&lt;p </mark> style="font-style: italic"<mark class="tag">&gt;</mark>
+    Consider now these buttons:
+  <mark class="tag">&lt;button</mark>
+        <mark class="property">[style.background-color]</mark>="b1Pressed ? 'green' : (b2Pressed ? 'red' : null)" class="myButton1"
+        (click)="onClick()"<mark class="tag">&gt;</mark>BUTTON 1
+  <mark class="tag">&lt;/button&gt;</mark>
+  -
+  <mark class="tag">&lt;button </mark>
+        <mark class="property">[style.background-color]</mark>="b2Pressed ? 'green' : (b1Pressed ? 'red' : null)"
+        (click)="onClick()">BUTTON 2
+  <mark class="tag">&lt;/button&gt;</mark>
+  <mark class="tag">&lt;/p&gt; </mark>
+</pre>
+
+
+
