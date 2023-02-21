@@ -8,7 +8,7 @@ import { EasyNgComponent } from './components/easy-ng/easy-ng.component';
 @NgModule({
   declarations: [
     AppComponent,
-    EasyNgComponent
+    EasyNgComponent,
   ],
   imports: [
     BrowserModule,
