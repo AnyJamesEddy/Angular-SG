@@ -1,57 +1,65 @@
-<p style="font-style: italic">"Hello! I'm {{name}} and this is a small guide for noobs like me!"</p>
-<p> First let's take a look to what has already happened! Here's how I made this presentation!</p>
-<!-- Code TS-->
-<p class="header mt-2">TypeScript</p>
-<pre class="myCode1 ">
+<div #test>
+<!--  <app-codepagerender>-->
+<!--  <p class="mt-4" style="font-style: italic">-->
+<!--    "Hello! I'm {{name}} and this is a small guide for noobs like me!"-->
+<!--  </p>-->
+<!--  </app-codepagerender>-->
+  <p class="mt-4" style="font-style: italic">
+    "Hello! I'm {{name}} and this is a small guide for noobs like me!"
+  </p>
+  <p> First let's take a look to what has already happened! Here's how I made this presentation!</p>
+  <!-- Code TS-->
+  <p class="header mt-2">TypeScript</p>
+  <pre class="myCode1">
   <mark class="decorator">@Component</mark>(&lbrace;...&rbrace;)
   <mark class="lrbraces">export class</mark> EasyNgComponent &lbrace;
   <mark class="property">name</mark>: <mark class="lrbraces">string</mark> = 'Eddy';
   &rbrace;
 </pre>
-<!--Code Render HTML-->
-<p class="header mt-2">HTML</p>
-<pre class="myCode1">
+  <!--Code Render HTML-->
+  <p class="header mt-2">HTML</p>
+  <pre class="myCode1">
   <mark class="tag">&lt;p</mark> style="font-style: italic"<mark class="tag">&gt;</mark>
       "Hello! I'm <mark class="lrbraces"> &lbrace; &lbrace; </mark><mark class="binding"> name </mark><mark
-  class="lrbraces"> &rbrace; &rbrace; </mark>and this is a small guide for noobs like me!"
+    class="lrbraces"> &rbrace; &rbrace; </mark>and this is a small guide for noobs like me!"
   <mark class="tag">&lt;/p&gt;</mark>
 </pre>
-<p class="mt-2">
-  I've linked the TS variable "name" to the HTML template using a double bracket. This is called <span
-  style="font-weight: bold">
+  <p class="mt-2">
+    I've linked the TS variable "name" to the HTML template using a double bracket. This is called <span
+    style="font-weight: bold">
   string interpolation</span> and it basically allows to render string or number variables created on the TS file linked
-  to the template.
-  It is one of the three main ways to make your Typescript code work with your HTML template!
-</p>
-<div>
-  These communication methods are:
+    to the template.
+    It is one of the three main ways to make your Typescript code work with your HTML template!
+  </p>
+  <div>
+    These communication methods are:
     <li class="font-bold mt-2"> String Interpolation</li>
     <li class="font-bold"> Property Binding</li>
     <li class="font-bold"> Event Binding</li>
-</div>
-<p style="font-style: italic" class="mt-2"> Consider now these buttons:
-  <button [style.background-color]="b1Pressed ? 'green' : (b2Pressed ? 'red' : null)"
-          style="border-color: black;border-width: 2px"
-          class="cursor-pointer"
-          (click)="onClick1()">BUTTON 1
-  </button>
-  -
-  <button [style.background-color]="b2Pressed ? 'green' : (b1Pressed ? 'red' : null)"
-          style="border-color: black;border-width: 2px"
-          class="cursor-pointer"
-          (click)="onClick2()">BUTTON 2
-  </button>
-</p>
-<p>
-  If you click on Button 1, it will become green, while Button 2 will become red and viceversa.
-  This has been made via <span style="font-weight: bold">event binding</span>.
-</p>
-<p>
-  Here's the snippets:
-</p>
-<!-- Code TS-->
-<p class="header mt-2">TypeScript</p>
-<pre class="myCode1">
+  </div>
+  <p style="font-style: italic" class="mt-2"> Consider now these buttons:
+    <button [style.background-color]="b1Pressed ? 'green' : (b2Pressed ? 'red' : null)"
+            style="border-color: black;border-width: 2px"
+            class="cursor-pointer"
+            (click)="onClick1()"> BUTTON 1
+    </button>
+    -
+    <button [style.background-color]="b2Pressed ? 'green' : (b1Pressed ? 'red' : null)"
+            style="border-color: black;border-width: 2px"
+            class="cursor-pointer"
+            (click)="onClick2()"> BUTTON 2
+    </button>
+  </p>
+  <p>
+    If you click on Button 1, it will become green, while Button 2 will become red and viceversa.
+    This has been made via <span style="font-weight: bold">event binding</span>.
+  </p>
+  <p>
+    Here's the snippets:
+  </p>
+  <!-- Code TS-->
+  <p class="header mt-2">TypeScript</p>
+  <pre class="myCode1">
   <mark class="decorator">@Component</mark>(&lbrace;...&rbrace;)
   <mark class="lrbraces">export class</mark> EasyNgComponent &lbrace;
   <mark class="property">name</mark>: <mark class="lrbraces">string</mark> = 'Eddy';
@@ -62,24 +70,24 @@
   <mark class="tag">onClick1()</mark> &lbrace;
   <mark class="lrbraces">if</mark> (<mark class="lrbraces">this</mark>.<mark class="property">b1Pressed</mark> === false) &lbrace;
       <mark class="lrbraces">this</mark>.<mark class="property">b1Pressed</mark> = !<mark class="lrbraces">this</mark>.<mark
-  class="property">b1Pressed</mark>;
+    class="property">b1Pressed</mark>;
       <mark class="lrbraces">this</mark>.<mark class="property">b2Pressed</mark> = !<mark class="lrbraces">this</mark>.<mark
-  class="property">b2Pressed</mark>;
+    class="property">b2Pressed</mark>;
     &rbrace;
   &rbrace;
 
    <mark class="tag">onClick2()</mark> &lbrace;
   <mark class="lrbraces">if</mark> (<mark class="lrbraces">this</mark>.<mark class="property">b2Pressed</mark> === false) &lbrace;
       <mark class="lrbraces">this</mark>.<mark class="property">b1Pressed</mark> = !<mark class="lrbraces">this</mark>.<mark
-  class="property">b1Pressed</mark>;
+    class="property">b1Pressed</mark>;
       <mark class="lrbraces">this</mark>.<mark class="property">b2Pressed</mark> = !<mark class="lrbraces">this</mark>.<mark
-  class="property">b2Pressed</mark>;
+    class="property">b2Pressed</mark>;
     &rbrace;
   &rbrace;
 </pre>
-<!--Code Render HTML-->
-<p class="header mt-2">HTML</p>
-<pre class="myCode1">
+  <!--Code Render HTML-->
+  <p class="header mt-2">HTML</p>
+  <pre class="myCode1">
   <mark class="tag">&lt;p </mark> style="font-style: italic"<mark class="tag">&gt;</mark>
     Consider now these buttons:
   <mark class="tag">&lt;button</mark>
@@ -93,35 +101,36 @@
   <mark class="tag">&lt;/button&gt;</mark>
   <mark class="tag">&lt;/p&gt; </mark>
 </pre>
-<p class="mt-2"> Using event binding, it is possible to link some feature (like a click!) of an element to a user coded
-  action, like the color switch you can see above.</p>
-<p>As regards <span style="font-weight: bold">property binding</span>, we are able to bind the property of an element
-  to a user instruction. For example, try to hit the button.</p>
-<div class="flex flex-row mt-2 items-center">
-  <div class="ml-28">
-    <button [disabled]="b2Pressed ? true : (b1Pressed ? false : null)"
-            [ngClass]="b2Pressed ? 'px-8 py-3 text-white bg-gray-300 rounded focus:outline-none cursor-not-allowed' :
+  <p class="mt-2"> Using event binding, it is possible to link some feature (like a click!) of an element to a user
+    coded
+    action, like the color switch you can see above.</p>
+  <p>As regards <span style="font-weight: bold">property binding</span>, we are able to bind the property of an element
+    to a user instruction. For example, try to hit the button.</p>
+  <div class="flex flex-row mt-2 items-center">
+    <div class="ml-28">
+      <button [disabled]="b2Pressed ? true : (b1Pressed ? false : null)"
+              [ngClass]="b2Pressed ? 'px-8 py-3 text-white bg-gray-300 rounded focus:outline-none cursor-not-allowed' :
             (!b2Pressed ? 'px-8 py-3 text-white bg-green-300 rounded focus:outline-none cursor-pointer' : null)"
-            (click)="onClick3()">CATCH ME IF YOU CAN
-    </button>
+              (click)="onClick3()">CATCH ME IF YOU CAN
+      </button>
+    </div>
+    <div *ngIf="b3Pressed" class="ml-20">
+      <span style="color: green"> You did it!!! </span>
+    </div>
   </div>
-  <div *ngIf="b3Pressed" class="ml-20">
-    <span style="color: green"> You did it!!! </span>
-  </div>
-</div>
-<p class="mt-2">Not so easy, right?</p>
-<p class="mt-2">Well, now try this:</p>
-<li> Hit "Button 1", the red button I used for explaining event binding</li>
-<li> Then QUICKLY come back here and hit this tricky button.</li>
-<p class="mt-2">
-  With this little game you saw how a property, in this specific case the
-  button "disabled" property, can be bound to a user interaction, an event, or even a timer
-  (yes, after something like 5 seconds that tricky button become useless again).
-</p>
-<p>Here is the snippet:</p>
-<!-- Code TS-->
-<p class="header mt-2">TypeScript</p>
-<pre class="myCode1">
+  <p class="mt-2">Not so easy, right?</p>
+  <p class="mt-2">Well, now try this:</p>
+  <li> Hit "Button 1", the red button I used for explaining event binding</li>
+  <li> Then QUICKLY come back here and hit this tricky button.</li>
+  <p class="mt-2">
+    With this little game you saw how a property, in this specific case the
+    button "disabled" property, can be bound to a user interaction, an event, or even a timer
+    (yes, after something like 5 seconds that tricky button become useless again).
+  </p>
+  <p>Here is the snippet:</p>
+  <!-- Code TS-->
+  <p class="header mt-2">TypeScript</p>
+  <pre class="myCode1">
   <mark class="decorator">@Component</mark>(&lbrace;...&rbrace;)
   <mark class="lrbraces">export class</mark> EasyNgComponent &lbrace;
   <mark class="property">name</mark>: <mark class="lrbraces">string</mark> = 'Eddy';
@@ -137,8 +146,10 @@
       <mark class="property">console</mark>.<mark class="tag">log</mark>(counter)
       <mark class="lrbraces">if </mark>(counter === 0) &lbrace;<mark class="tag">clearInterval</mark>(intervalId);
         <mark class="lrbraces">if </mark> (<mark class="lrbraces">this</mark>.<mark class="property">b2Pressed </mark> === false) &lbrace;
-          <mark class="lrbraces">this</mark>.<mark class="property">b1Pressed</mark> = !<mark class="lrbraces">this</mark>.<mark class="property">b1Pressed</mark>;
-          <mark class="lrbraces">this</mark>.<mark class="property">b2Pressed</mark> = !<mark class="lrbraces">this</mark>.<mark class="property">b2Pressed</mark>;
+          <mark class="lrbraces">this</mark>.<mark class="property">b1Pressed</mark> = !<mark
+    class="lrbraces">this</mark>.<mark class="property">b1Pressed</mark>;
+          <mark class="lrbraces">this</mark>.<mark class="property">b2Pressed</mark> = !<mark
+    class="lrbraces">this</mark>.<mark class="property">b2Pressed</mark>;
           <mark class="lrbraces">this</mark>.<mark class="property">b3Pressed</mark> = false;
         &rbrace;
       &rbrace;
@@ -147,9 +158,9 @@
   <mark class="tag">onClick1()</mark> &lbrace;
   <mark class="lrbraces">if </mark> (<mark class="lrbraces">this</mark>.<mark class="property">b1Pressed</mark> === false) &lbrace;
       <mark class="lrbraces">this</mark>.<mark class="property">b1Pressed</mark> = !<mark class="lrbraces">this</mark>.<mark
-  class="property">b1Pressed</mark>;
+    class="property">b1Pressed</mark>;
       <mark class="lrbraces">this</mark>.<mark class="property">b2Pressed</mark> = !<mark class="lrbraces">this</mark>.<mark
-  class="property">b2Pressed</mark>;
+    class="property">b2Pressed</mark>;
     &rbrace;
   <mark class="lrbraces">this</mark>.<mark class="tag">callTimer()</mark>;
   &rbrace;
@@ -157,15 +168,15 @@
    <mark class="tag">onClick2()</mark> &lbrace;
   <mark class="lrbraces">if </mark> (<mark class="lrbraces">this</mark>.<mark class="property">b2Pressed</mark> === false) &lbrace;
       <mark class="lrbraces">this</mark>.<mark class="property">b1Pressed</mark> = !<mark class="lrbraces">this</mark>.<mark
-  class="property">b1Pressed</mark>;
+    class="property">b1Pressed</mark>;
       <mark class="lrbraces">this</mark>.<mark class="property">b2Pressed</mark> = !<mark class="lrbraces">this</mark>.<mark
-  class="property">b2Pressed</mark>;
+    class="property">b2Pressed</mark>;
     &rbrace;
   &rbrace;
 </pre>
-<!--Code Render HTML-->
-<p class="header mt-2">HTML</p>
-<pre class="myCode1">
+  <!--Code Render HTML-->
+  <p class="header mt-2">HTML</p>
+  <pre class="myCode1">
   <mark class="tag">&lt;div </mark> class="flex flex-row mt-2 items-center"<mark class="tag">&gt;</mark>
   <mark class="tag">&lt;div </mark> class="ml-28"<mark class="tag">&gt;</mark>
     <mark class="tag">&lt;button </mark>
@@ -175,19 +186,19 @@
             <mark class="property">(click)</mark>="onClick3()"<mark class="tag">&gt;</mark> CATCH ME IF YOU CAN
      <mark class="tag">&lt;/button</mark><mark class="tag">&gt;</mark>
   <mark class="tag">&lt;/div</mark><mark class="tag">&gt;</mark>
-  <mark class="tag">&lt;div</mark> <mark class="property">*ngIf</mark>="b3Pressed" class="ml-20"<mark class="tag">&gt;</mark>
+  <mark class="tag">&lt;div</mark> <mark class="property">*ngIf</mark>="b3Pressed" class="ml-20"<mark
+    class="tag">&gt;</mark>
     <mark class="tag">&lt;span</mark> style="color: green"<mark class="tag">&gt;</mark> You did it!!! <mark class="tag">&lt;/span&gt;</mark>
   <mark class="tag">&lt;/div</mark><mark class="tag">&gt;</mark>
 <mark class="tag">&lt;/div</mark><mark class="tag">&gt;</mark>
 </pre>
-<p class="mt-2">
-  Also the style properties, those funny instructions that make the button look so cool,
-  changed with the event. In this example, they are distributed in a group of class members,
-  but bound as a single property using "ngClass", a directive
-  which allows to "append" one or more classes to the element class group.
-</p>
-<p class="mt-2">
-  But Hey! Has anyone said <span style="font-weight: bold">Directive?</span>
-</p>
-
-
+  <p class="mt-2">
+    Also the style properties, those funny instructions that make the button look so cool,
+    changed with the event. In this example, they are distributed in a group of class members,
+    but bound as a single property using "ngClass", a directive
+    which allows to "append" one or more classes to the element class group.
+  </p>
+  <p class="mt-2">
+    But Hey! Has anyone said <span style="font-weight: bold">Directive?</span>
+  </p>
+</div>

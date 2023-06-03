@@ -1,0 +1,53 @@
+<ul class="space-y-2">
+  <li routerLinkActive="active">
+    <a [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['section/1']"
+       class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+      <svg class="w-6 h-6 dark:text-white" fill="currentColor" viewBox="0 96 960 960"
+           xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M584 554q-19 0-32-13t-13-32q0-19 13-32t32-13q19 0 32 13t13 32q0 19-13 32t-32 13Zm-209 0q-19 0-32-13t-13-32q0-19 13-32t32-13q19 0 32 13t13 32q0 19-13 32t-32 13Zm105 216q-56 0-102-30t-72-79h348q-26 49-72 79t-102 30Zm0 166q-74 0-139.5-28.5T226 830q-49-49-77.5-114.5T120 576q0-74 28.5-139.5T226 322q49-49 114.5-77.5T480 216q74 0 139.5 28.5T734 322q49 49 77.5 114.5T840 576q0 74-28.5 139.5T734 830q-49 49-114.5 77.5T480 936Zm0-60q123 0 211.5-87.5T780 578q0-123-87-215t-215-92h-18q-7 0-18 1-2 8-3.5 19t-1.5 19q0 25 16.5 41.5T495 368q12 0 20-1.5t15-1.5q10 0 17 5t7 15q0 16-15 24.5t-44 8.5q-46 0-77-31t-31-77q0-5 .5-13t2.5-13q-91 33-150.5 110T180 574q0 123 88.5 212.5T480 876Zm0-302Z"/>
+      </svg>
+      <span class="ml-3">Section 1</span>
+    </a>
+  </li>
+  <li class="subsection">
+    <a [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['section/1/chapter/1']"
+       class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+      <svg class="w-4 h-4 dark:text-white" fill="none" stroke-width="1px" stroke="currentColor" viewBox="0 0 24 24"
+           xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+        <path
+          d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path>
+      </svg>
+      <span class="ml-3">Introduction</span>
+    </a>
+  </li>
+  <li routerLinkActive="active">
+    <a [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['section/2']"
+       class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+      <span class="ml-3">Developement Page</span>
+    </a>
+  </li>
+  <!--  <li routerLinkActive="active"-->
+  <!--      [routerLinkActiveOptions]="{exact:true}">-->
+  <!--    <a  routerLink="sections:/section:/id" href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">-->
+  <!--      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 dark:text-white"-->
+  <!--           fill="currentColor" viewBox="0 96 960 960"><path d="M260.08 329q-30.08 0-51.58-21.42-21.5-21.421-21.5-51.5 0-30.08 21.42-51.58 21.421-21.5 51.5-21.5 30.08 0 51.58 21.42 21.5 21.421 21.5 51.5 0 30.08-21.42 51.58-21.421 21.5-51.5 21.5ZM695 556q-25 0-42.5-17.5T635 496q0-25 17.5-42.5T695 436q25 0 42.5 17.5T755 496q0 25-17.5 42.5T695 556ZM190 976V686h-70V436q0-24.75 17.625-42.375T180 376h152q17.448 0 31.724 9T386 410l136 278 73-78q6-7 14.357-10.5T627 596h129q18.333 0 31.167 12.833Q800 621.667 800 640v166h-50v170H610V673l-59 63h-70L350 473v503H190Z"/></svg>-->
+  <!--      <span class="ml-3">Section 2</span>-->
+  <!--    </a>-->
+  <!--  </li>-->
+  <!--  <li>-->
+  <!--    <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">-->
+  <!--      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 dark:text-white" fill="currentColor" viewBox="0 96 960 960"><path d="m429 1016-19-386-163-94-19 68 78 136-51 30-92-157 46-164 237-137-112-112 42-42 168 167-145 83 85 69 318-283 38 38-330 360-20 424h-61ZM193 379q-30 0-51.5-21.5T120 306q0-30 21.5-51.5T193 233q30 0 51.5 21.5T266 306q0 30-21.5 51.5T193 379Z"/></svg>-->
+  <!--      <span class="ml-3">Section 3</span>-->
+  <!--    </a>-->
+  <!--  </li>-->
+  <!--  <li>-->
+  <!--    <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">-->
+  <!--      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 dark:text-white" fill="currentColor" viewBox="0 96 960 960"> <path d="m538 936 36-348q-45-11-83.5-33T420 501l-13-13-109 108 89 89v251h-60V712l-65-57 11 94-139 180-48-37 125-161-50-128q-9-23-7-43t13-31l134-132q11-11 23-16t26-5q14 0 27.5 5.5T400 396l65 64q33 32 74 53t88 23h92q15 0 25 10t12 25l30 286q15 5 25 18.5t10 30.5q0 21-15 35.5T770 956q-21 0-36-14.5T719 906q0-15 7-26.5t19-18.5l-7-75H595l-15 150h-42Zm-28-560q-29 0-49.5-20.5T440 306q0-29 20.5-49.5T510 236q29 0 49.5 20.5T580 306q0 29-20.5 49.5T510 376Zm89 370h135l-17-170H616l-17 170Z"/></svg>-->
+  <!--      <span class="ml-3">Section 4</span>-->
+  <!--    </a>-->
+  <!--  </li>-->
+  <!--</ul>-->
